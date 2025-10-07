@@ -7,8 +7,8 @@ const AdminNavbar = () => {
   
   return (
     <div className="flex justify-between items-center px-6 md:px-16 lg:px-36 py-4">
-  {/* Left side: Logo + Brand */}
-  <div className="flex items-center gap-3">
+
+  <div onClick={()=> navigate("/")} className="cursor-pointer flex items-center gap-3">
     <Link to='/'>
       <img src={assets.logo} alt="logo" className="w-auto h-10 md:h-12" />
     </Link>
@@ -17,7 +17,6 @@ const AdminNavbar = () => {
     </h3>
   </div>
 
-  {/* Right side: Button */}
   <button
     onClick={() => navigate("/")}
     className="px-4 md:px-6 py-2 text-xs md:text-sm bg-primary hover:bg-primary-dull transition rounded-full font-medium cursor-pointer"
